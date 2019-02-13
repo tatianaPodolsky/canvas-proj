@@ -84,6 +84,10 @@ function startup() {
 
 
 function downloadImg(elLink) {
+<<<<<<< HEAD
     var imgContent = gCanvas.toDataURL('image/jpeg');
+=======
+    var imgContent = gCanvas.toDataURL('image/png');
+>>>>>>> affe2352051631fd8751ca2afd04b9e68997c5eb
     elLink.href = imgContent
 }
