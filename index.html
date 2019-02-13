@@ -10,22 +10,27 @@
 </head>
 <body onload="init()">
     <header>
-        <nav class="main-nav">
+        <nav class="main-nav navbar flex align-center space-evenly">
             <div class="color-choice">Choose color  <input type="color" id="color-pick" value="#ff0000"></div>
-            <div class="shape-choice">
-              </div><div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div class="dropdown">
+                    <button class="dropbtn">Choose Shape 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Line</a>
+                      <a href="#">Arc</a>
+                      <a href="#">Rect</a>
+                    </div>
+                  </div> 
                 
-              </div>
-            <div class="contact us"></div>
+            
+            <div class="contact" onclick="contact()">Contact Us</div>
         </nav>
     </header>
-    <div id="myDropdown" class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    <canvas height="500" width="500" id="canvas-container" onmousedown="canvasClicked(event)"></canvas>
+    <main>
+
+        <canvas height="500" width="500" id="canvas-container" onmousedown="canvasClicked(event)" class="canvas"></canvas>
+    </main>
     <script src="js/main.js"></script>
 </body>
 </html>

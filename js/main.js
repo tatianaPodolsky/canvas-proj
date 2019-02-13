@@ -20,3 +20,7 @@ function drawPoint(x, y, color) {
     gCtx.stroke()
     gCtx.fill()
 }
+
+function contact () {
+    alert('This feature will be added in future, this project was built by Tatiana and Ido')
+}
