@@ -9,7 +9,7 @@ function init() {
 
 function canvasClicked(ev, shape) {
     console.log('hi, ev: ', ev);
-    ev.offsetX
+    // ev.offsetX
 
 }
 
