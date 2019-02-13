@@ -27,10 +27,7 @@
             <div class="contact" onclick="contact()">Contact Us</div>
         </nav>
     </header>
-    <main>
-
-        <canvas height="500" width="500" id="canvas-container" onmousedown="canvasClicked(event)" class="canvas"></canvas>
-    </main>
+    <canvas height="500" width="500" id="canvas-container" onmousemove="onMove(event)" onmousedown="onDown(event)"></canvas>
     <script src="js/main.js"></script>
 </body>
 </html>
