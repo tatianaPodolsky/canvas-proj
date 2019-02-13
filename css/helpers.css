@@ -1,0 +1,30 @@
+/* GRID */
+
+.grid {
+    display: grid;
+}
+
+/* FLEX */
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+.no-repeat {
+    background-repeat: no-repeat;
+}
+
+.cover {
+    background-size: cover;
+} 
