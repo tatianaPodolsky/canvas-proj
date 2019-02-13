@@ -4,7 +4,8 @@ var gCtx;
 //     {name:'pen', func: drawLine}, {name: 'rect', func: drawRect}, {name: 'circle', func: drawCircle}]
 
 var gPrevPos;
-var gColor = 'red';
+var gColor;
+var gShape = 'line'
 
 function init() {
     gCanvas = document.querySelector('#canvas-container');
@@ -48,11 +49,11 @@ function drawLine(x, y) {
 
 function startup() {
     let elColor = document.querySelector("#color-pick");
-    // elColor.value = '#00ffa9' // default
+    gColor = elColor.value;
     elColor.addEventListener("input", getColor, false);
         function getColor() {
-        gColor = elColor.value
-        console.log('color: ', elColor.value);
-
+        gColor = elColor.value;
     }
+
 }
+
