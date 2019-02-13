@@ -4,19 +4,20 @@ var gCtx;
 //     {name:'pen', func: drawLine}, {name: 'rect', func: drawRect}, {name: 'circle', func: drawCircle}]
 
 var gPrevPos;
-var gColor = 'red';
-var gShape = 'arc'
+var gColor;
+var gShape = 'line'
 
 function init() {
     gCanvas = document.querySelector('#canvas-container');
     gCtx = gCanvas.getContext('2d');
+    startup();
 }
 
 function onDown(ev) {
     console.log('down, ev: ', ev);
     let x = ev.offsetX;
     let y = ev.offsetY;
-    gPrevPos = {x: x, y: y};
+    gPrevPos = { x: x, y: y };
 }
 
 function onMove(ev) {
@@ -26,6 +27,11 @@ function onMove(ev) {
     drawShape(x, y) ;
     gPrevPos.x = x;
     gPrevPos.y = y;
+}
+
+
+function contact() {
+    alert('This feature will be added in future, this project was built by Tatiana and Ido')
 }
 
 function drawLine(x, y) {
@@ -62,3 +68,16 @@ function drawShape(x, y) {
 function setShape(shape) {
     gShape = shape;
 }
+
+// COLOR PICKING with add event listener
+
+function startup() {
+    let elColor = document.querySelector("#color-pick");
+    gColor = elColor.value;
+    elColor.addEventListener("input", getColor, false);
+        function getColor() {
+        gColor = elColor.value;
+    }
+
+}
+
