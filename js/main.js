@@ -28,11 +28,6 @@ function onMove(ev) {
     gPrevPos.y = y;
 }
 
-
-function contact () {
-    alert('This feature will be added in future, this project was built by Tatiana and Ido')
-}
-
 function drawLine(x, y) {
     // debugger;
     gCtx.beginPath();
