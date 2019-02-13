@@ -9,27 +9,28 @@ var gColor = 'red';
 function init() {
     gCanvas = document.querySelector('#canvas-container');
     gCtx = gCanvas.getContext('2d');
+    startup();
 }
 
 function onDown(ev) {
     console.log('down, ev: ', ev);
     let x = ev.offsetX;
     let y = ev.offsetY;
-    gPrevPos = {x: x, y: y};
+    gPrevPos = { x: x, y: y };
 }
 
 function onMove(ev) {
     let x = ev.offsetX;
     let y = ev.offsetY;
     console.log('move', ev);
-    if(ev.which !== 1) return;
+    if (ev.which !== 1) return;
     drawLine(x, y);
     gPrevPos.x = x;
     gPrevPos.y = y;
 }
 
 
-function contact () {
+function contact() {
     alert('This feature will be added in future, this project was built by Tatiana and Ido')
 }
 
@@ -40,4 +41,18 @@ function drawLine(x, y) {
     gCtx.moveTo(gPrevPos.x, gPrevPos.y);
     gCtx.lineTo(x, y);
     gCtx.stroke();
+}
+
+
+// COLOR PICKING with add event listener
+
+function startup() {
+    let elColor = document.querySelector("#color-pick");
+    // elColor.value = '#00ffa9' // default
+    elColor.addEventListener("input", getColor, false);
+        function getColor() {
+        gColor = elColor.value
+        console.log('color: ', elColor.value);
+
+    }
 }
