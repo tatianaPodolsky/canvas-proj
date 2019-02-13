@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Canvas ex</title>
 </head>
-<body>
-    
+<body onload="init()">
+    <header>
+        <nav>
+            <div class="color-choice"></div>
+            <div class="shape-choice"></div>
+            <div class="contact us"></div>
+        </nav>
+    </header>
+    <canvas height="500" width="500" id="canvas-container" onmousedown="canvasClicked(event)"></canvas>
+    <script src="main.js"></script>
 </body>
 </html>
