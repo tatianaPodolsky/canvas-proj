@@ -51,7 +51,7 @@ function drawArc(x, y) {
 
 function drawRect(x, y) {
     gCtx.fillStyle = gColor;
-    gCtx.fillRect(x, y, 10, 10);
+    gCtx.fillRect(x, y, 30, 30);
     gCtx.stroke();
 
 }
