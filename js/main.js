@@ -23,9 +23,8 @@ function onDown(ev) {
 function onMove(ev) {
     let x = ev.offsetX;
     let y = ev.offsetY;
-    console.log('move', ev);
-    if (ev.which !== 1) return;
-    drawLine(x, y);
+    if(ev.which !== 1) return;
+    drawShape(x, y) ;
     gPrevPos.x = x;
     gPrevPos.y = y;
 }
@@ -36,7 +35,6 @@ function contact() {
 }
 
 function drawLine(x, y) {
-    // debugger;
     gCtx.beginPath();
     gCtx.strokeStyle = gColor;
     gCtx.moveTo(gPrevPos.x, gPrevPos.y);
@@ -44,6 +42,32 @@ function drawLine(x, y) {
     gCtx.stroke();
 }
 
+function drawArc(x, y) {
+    gCtx.arc(x, y, 50, 0, 2*Math.PI);
+    gCtx.fillStyle = gColor;
+    gCtx.fill();
+    gCtx.stroke();
+}
+
+function drawRect(x, y) {
+    gCtx.fillStyle = gColor;
+    gCtx.fillRect(x, y, 10, 10);
+    gCtx.stroke();
+
+}
+
+function drawShape(x, y) {
+    if (gShape === 'line') {
+        return drawLine(x, y);
+    } 
+    else if (gShape === 'arc') {
+        return drawArc(x, y)
+    } else return drawRect(x, y);
+}
+
+function setShape(shape) {
+    gShape = shape;
+}
 
 // COLOR PICKING with add event listener
 
