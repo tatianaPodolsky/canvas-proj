@@ -75,4 +75,10 @@ canvas {
       color: white;
   }
 
+  .download-btn {
+      position: absolute;
+      top: 650px;
+      left: 10px;
+  }
+
   
